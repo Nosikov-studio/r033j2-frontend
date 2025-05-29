@@ -6,7 +6,7 @@ const secretField1 = document.getElementById('secretField1');
 const secretField2 = document.getElementById('secretField2');
 const butt = document.getElementById('btn');
 const f =document.getElementById('f')
-let token = ""; // глобальная переменная
+//let token = ""; // глобальная переменная
 
   form1.addEventListener('submit', function(event) {
     event.preventDefault();
