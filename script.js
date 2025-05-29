@@ -6,7 +6,7 @@ const secretField1 = document.getElementById('secretField1');
 const secretField2 = document.getElementById('secretField2');
 const butt = document.getElementById('btn');
 const f =document.getElementById('f')
-
+let token = ""; // глобальная переменная
 
   form1.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -36,8 +36,22 @@ const f =document.getElementById('f')
   });
 
 //////////////////////////////////////////////////////////////
+function getCookie(name) {
+  const matches = document.cookie.match(new RegExp(
+    // ищем cookie с именем name
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
+//////////////////////////////////////////////////////////////
 
 function datas() {
+
+const token = getCookie('token');
+console.log(token);
+
+
 
 fetch('https://truruki.ru/test', {
     method: 'POST',
