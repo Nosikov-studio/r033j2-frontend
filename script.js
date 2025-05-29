@@ -48,8 +48,8 @@ function getCookie(name) {
 
 function datas() {
 
-const token = getCookie('token');
-console.log(token);
+//const token = getCookie('token');
+//console.log(token);
 
 
 
