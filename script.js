@@ -36,20 +36,13 @@ let token = ""; // глобальная переменная
   });
 
 //////////////////////////////////////////////////////////////
-function getCookie(name) {
-  const matches = document.cookie.match(new RegExp(
-    // ищем cookie с именем name
-    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-  ));
-  return matches ? decodeURIComponent(matches[1]) : undefined;
-}
+
 
 //////////////////////////////////////////////////////////////
 
 function datas() {
 
-//const token = getCookie('token');
-//console.log(token);
+
 
 
 
@@ -57,7 +50,7 @@ fetch('https://truruki.ru/test', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`
+     // 'Authorization': `Bearer ${token}`
       },    
     credentials: 'include', //куки 
   })
