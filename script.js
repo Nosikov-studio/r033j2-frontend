@@ -18,6 +18,7 @@ const f =document.getElementById('f')
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
       },
     body: JSON.stringify({
       ...FormDataObject,
@@ -43,6 +44,7 @@ fetch('https://truruki.ru/test', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
       },    
     credentials: 'include', //куки 
   })
